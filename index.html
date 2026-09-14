@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Eshu ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<div id="heartsContainer"></div>
+
+<button id="musicButton" class="music-button">
+    🎵 <span id="musicText">Music</span>
+</button>
+
+<div class="progress" id="progress">
+    <span class="progress-dot active"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+</div>
+
+<main>
+
+    <section class="scene active" id="scene1">
+        <div class="scene-content intro-content">
+
+            <div class="countdown-box">
+                <p class="countdown-title">
+                    Eshu has been in this beautiful world for ❤️
+                </p>
+
+                <div class="countdown">
+                    <div>
+                        <span id="years">00</span>
+                        <small>Years</small>
+                    </div>
+
+                    <div>
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div>
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div>
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div>
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+
+                <p class="dob-text">DOB: 03/10/2004 🎂</p>
+            </div>
+
+            <div class="small-heart">♡</div>
+
+            <p class="small-text">
+                A little surprise for someone very special...
+            </p>
+
+            <h1>Hey, Eshu...</h1>
+
+            <p class="intro-text">
+                I made something special for you.
+                Take a little journey through my heart. ❤️
+            </p>
+
+            <button class="main-button" onclick="startSurprise()">
+                Start the Surprise 💌
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene2">
+        <button class="back-button" onclick="previousScene()">← Back</button>
+
+        <div class="scene-content">
+
+            <div class="birthday-decoration">🎂</div>
+
+            <p class="small-text">
+                Today is your special day
+            </p>
+
+            <h1>Happy 22nd Birthday</h1>
+
+            <h2>Eshu ❤️</h2>
+
+            <p class="birthday-text">
+                22 years of being this beautiful, amazing and
+                unforgettable person.
+            </p>
+
+            <button class="main-button" onclick="nextScene()">
+                There's More ❤️
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene3">
+        <button class="back-button" onclick="previousScene()">← Back</button>
+
+        <div class="scene-content">
+
+            <div class="question-icon">💭</div>
+
+            <p class="small-text">
+                Let me ask you something...
+            </p>
+
+            <h2>
+                Do you know how special<br>
+                you are to me?
+            </h2>
+
+            <div class="answer-buttons">
+                <button class="answer-button" id="answerYes">
+                    Yes ❤️
+                </button>
+
+                <button class="answer-button" id="answerNo">
+                    Maybe... 🥺
+                </button>
+            </div>
+
+            <p id="answerText" class="answer-text"></p>
+
+            <button class="main-button hidden" id="questionNext">
+                Continue ❤️
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene4">
+        <button class="back-button" onclick="previousMemory()">← Back</button>
+
+        <div class="scene-content memory-content">
+
+            <p class="small-text">
+                Some moments I'll always keep...
+            </p>
+
+            <h2>Our Memories ❤️</h2>
+
+            <div class="memory-card">
+
+                <div class="memory-number" id="memoryNumber">
+                    01
+                </div>
+
+                <div class="memory-photo">
+
+                    <img id="memoryImage"
+                         src="images/photo1.jpg"
+                         alt="Our memory">
+
+                    <div id="photoPlaceholder"
+                         class="photo-placeholder">
+                        📷
+                    </div>
+
+                </div>
+
+                <h3 id="memoryTitle">
+                    A Beautiful Moment
+                </h3>
+
+                <p id="memoryText">
+                    Every moment with you becomes a memory worth keeping.
+                </p>
+
+            </div>
+
+            <button class="main-button" id="memoryButton">
+                Next Memory ❤️
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene5">
+        <button class="back-button" onclick="previousScene()">← Back</button>
+
+        <div class="scene-content">
+
+            <p class="small-text">
+                If I had to explain why I love you...
+            </p>
+
+            <h2>
+                22 Things I Love About You ❤️
+            </h2>
+
+            <div class="thing-card">
+
+                <div class="thing-number" id="thingNumber">
+                    01
+                </div>
+
+                <p id="thingText">
+                    Your smile can make even my worst day better.
+                </p>
+
+            </div>
+
+            <button class="main-button" id="thingButton">
+                Next ❤️
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene6">
+        <button class="back-button" onclick="previousScene()">← Back</button>
+
+        <div class="scene-content story-content">
+
+            <p class="small-text">
+                And then there is...
+            </p>
+
+            <h2>
+                Our Little Story ❤️
+            </h2>
+
+            <div class="story-card">
+
+                <div class="story-icon" id="storyIcon">
+                    💫
+                </div>
+
+                <h3 id="storyTitle">
+                    The Beginning
+                </h3>
+
+                <p id="storyText">
+                    Every beautiful story has a beginning.
+                </p>
+
+            </div>
+
+            <button class="main-button" id="storyButton">
+                Next Chapter ❤️
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene7">
+        <button class="back-button" onclick="previousScene()">← Back</button>
+
+        <div class="scene-content letter-content">
+
+            <p class="small-text">
+                There is something I want to tell you...
+            </p>
+
+            <h2>
+                A Letter For You 💌
+            </h2>
+
+            <div class="envelope" id="envelope">
+
+                <div class="envelope-top"></div>
+
+                <div class="envelope-body">
+                    <span>💌</span>
+                    <p>Open Me</p>
+                </div>
+
+            </div>
+
+            <div class="letter hidden" id="letter">
+
+                <p>My Dear Eshu,</p>
+
+                <p>
+                    Happy 22nd Birthday to the person who makes my life
+                    a little brighter just by being in it.
+                </p>
+
+                <p>
+                    I hope you always remember how special you are.
+                    Your smile, your kindness, your little habits,
+                    your way of making ordinary moments feel special...
+                    I love all of it.
+                </p>
+
+                <p>
+                    I may not always have the perfect words,
+                    but I hope my actions always remind you
+                    how much you mean to me.
+                </p>
+
+                <p>
+                    On your birthday, I wish you happiness,
+                    peace, success and all the beautiful things
+                    your heart deserves.
+                </p>
+
+                <p>
+                    And I hope I get to be beside you for many
+                    more birthdays to come. ❤️
+                </p>
+
+                <p class="letter-ending">
+                    Happy Birthday, Eshu.<br>
+                    Always yours. ❤️
+                </p>
+
+            </div>
+
+            <button class="main-button hidden" id="letterNext">
+                One Last Thing ❤️
+            </button>
+
+        </div>
+    </section>
+
+    <section class="scene" id="scene8">
+        <button class="back-button" onclick="previousScene()">← Back</button>
+
+        <div class="scene-content final-content">
+
+            <div class="final-hearts">
+                ❤️ 💕 ❤️
+            </div>
+
+            <p class="small-text">
+                And finally...
+            </p>
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+            <h2>
+                My Beautiful Eshu ❤️
+            </h2>
+
+            <p class="final-text">
+                May your 22nd year be filled with love,
+                laughter, beautiful memories and everything
+                your heart wishes for.
+            </p>
+
+            <button class="main-button" onclick="celebrate()">
+                Make a Wish ✨
+            </button>
+
+        </div>
+    </section>
+
+</main>
+
+<div class="popup hidden" id="lovePopup">
+
+    <div class="popup-box">
+
+        <div class="popup-hearts">
+            ❤️ 💕 ❤️ 💕 ❤️
+        </div>
+
+        <h2>
+            Happy Birthday Eshu! 🎂
+        </h2>
+
+        <p>
+            You deserve all the happiness in the world.
+        </p>
+
+        <p class="popup-love">
+            I love you. ❤️
+        </p>
+
+        <button class="main-button" onclick="closePopup()">
+            Close ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<div id="birthdayCelebration" class="celebration hidden">
+
+    <div class="celebration-glow"></div>
+
+    <div class="celebration-message">
+
+        <div class="celebration-crown">👑</div>
+
+        <div class="celebration-title">
+            22 Years Complete! 🎂
+        </div>
+
+        <div class="celebration-name">
+            Happy Birthday Eshu ❤️
+        </div>
+
+        <p>
+            Today the world celebrates the beautiful person you are. ✨
+        </p>
+
+        <div class="celebration-hearts">
+            ❤️ 💕 ❤️ 💕 ❤️
+        </div>
+
+        <button class="main-button celebration-continue" id="celebrationContinue">
+            Continue The Surprise ❤️
+        </button>
+
+    </div>
+
+    <div id="balloons"></div>
+    <div id="fireworks"></div>
+    <div id="sparkles"></div>
+    <div id="flowers"></div>
+    <div id="celebrationHearts"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
